@@ -1,10 +1,11 @@
 import fs from 'fs';
+import { AvatarLoaderOptions } from '../interfaces';
 
 class AvatarLoader {
   private _avatar: string;
 
-  constructor() {
-    this._avatar = fs.readFileSync('./static/avatar.txt').toString();
+  constructor({ avatarPath }: AvatarLoaderOptions) {
+    this._avatar = fs.readFileSync(avatarPath).toString();
   }
 
   get avatar(): string {

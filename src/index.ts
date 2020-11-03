@@ -1,7 +1,7 @@
 import AvatarLoader from './avatar-loader';
+import { AvatarLoaderOptions } from './interfaces';
 
-const avatarLoader = new AvatarLoader();
-
-export default () => {
+export default (options: AvatarLoaderOptions) => {
+  const avatarLoader = new AvatarLoader(options);
   console.log(avatarLoader.avatar);
 };
