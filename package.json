@@ -1,6 +1,6 @@
 {
   "name": "no-bs-typescript-boilerplate",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Simple Typescript boilerplate for writing modules",
   "main": "dist/index.js",
   "typings": "typings",
@@ -8,7 +8,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "rm:dist": "rm -rf dist/*",
-    "dev": "yarn rm:dist && concurrently \"rollup -cw\" \"nodemon --inspect\"",
+    "dev": "yarn rm:dist && concurrently \"rollup -cw\" \"sleep 10 && nodemon --inspect\"",
     "build": "yarn rm:dist && NODE_ENV=production rollup -c",
     "prepare": "yarn link && yarn link no-bs-typescript-boilerplate"
   },
@@ -23,7 +23,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.27.2",
     "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
+    "typescript": "^4.1.2"
   },
   "dependencies": {}
 }
