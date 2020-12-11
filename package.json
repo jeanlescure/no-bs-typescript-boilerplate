@@ -10,6 +10,8 @@
     "rm:dist": "rm -rf dist/*",
     "dev": "yarn rm:dist && concurrently \"rollup -cw\" \"sleep 10 && nodemon --inspect\"",
     "build": "yarn rm:dist && NODE_ENV=production rollup -c",
+    "project:rename": "echo 'New package name: ' && read NEW_NAME && node -e \"require('fs').writeFileSync('package.json', JSON.stringify({...require('package.json'), name: '$NEW_NAME', version: '0.0.1'}, null, 2));\"",
+    "project:new": "rm -rf dist static typings src .all-contributorsrc && mkdir src && touch src/index.ts && touch src/interfaces.ts && yarn project:rename",
     "prepare": "yarn link && yarn link no-bs-typescript-boilerplate"
   },
   "devDependencies": {
