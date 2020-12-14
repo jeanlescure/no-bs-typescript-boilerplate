@@ -35,6 +35,17 @@ Please consider:
 The logic of this repo is structured in such a way that all you need to worry about is placing your
 code in the `src` directory (using `src/index.ts` as entry point).
 
+Take a look at the placeholder code in `src` to get familiarized with the basics.
+
+Once you feel comfortable to start working on your own project you can run:
+
+```sh
+yarn project:new
+```
+
+The `project:new` script deletes all placeholder code and/or assets, requests you to input a new package
+name, and initiates an empty git config for you to start commiting your changes to a clean slate.
+
 ## Development and build scripts
 
 I chose Rollup to handle the transpiling, compression, and any other transformations needed to get
