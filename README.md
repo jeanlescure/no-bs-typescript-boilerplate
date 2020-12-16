@@ -64,7 +64,7 @@ communication with the users of your code.
 yarn dev
 ```
 
-Uses [concurrently]() to run Rollup in watch mode (which means it will transpile to `dist` when you
+Uses [concurrently](https://www.npmjs.com/package/concurrently) to run Rollup in watch mode (which means it will transpile to `dist` when you
 save changes to your code), as well as Nodemon to listen for changes in the `dist` directory and
 re-run the `runkit.js` as you modify your source! This includes running node with the `--inspect`
 flag so you can inspect your code using [Google Chrome Dev Tools](https://nodejs.org/en/docs/guides/debugging-getting-started/)
